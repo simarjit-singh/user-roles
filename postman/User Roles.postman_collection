@@ -1,0 +1,167 @@
+{
+	"variables": [],
+	"info": {
+		"name": "User Roles",
+		"_postman_id": "384916df-1bf0-d704-02de-d4daa4cf9be1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"url": "http://localhost:3000/api/v1/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User with UserId",
+			"request": {
+				"url": "http://localhost:3000/api/v1/users/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"url": "http://localhost:3000/api/v1/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjBjMTUxMWYwYTgwMzQ5M2VmMjViNDdiOGFjMzU1ZDI4ZjYyYzc3MDUzZmU2YTU3MjAzMGRiMDVhNmNjNDk2ODhhMGNiNDgzZGFiY2EzZjg1In0.eyJhdWQiOiIxIiwianRpIjoiMGMxNTExZjBhODAzNDkzZWYyNWI0N2I4YWMzNTVkMjhmNjJjNzcwNTNmZTZhNTcyMDMwZGIwNWE2Y2M0OTY4OGEwY2I0ODNkYWJjYTNmODUiLCJpYXQiOjE1NDQ2MzUxNTYsIm5iZiI6MTU0NDYzNTE1NiwiZXhwIjoxNTc2MTcxMTU2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tjJMsOVdy1jKIF3UiKuuEpNLr1ErkfXJx1ChHMBY1pp8um2NE6NfolBycKRN0biDeweKnF9Nek7VfqoEB4c-CjANi_BvZ7Q9YlxtZSPgzAWQCvB3-oxHubgFMJ6CLeFpQ0pOFwVPUNg1vXMDUf96ZlUuk-9wUHDA7FuFP5W2olqQHjeMzJlNrHNjlaX-z9nhTvsALUraUVKVD5oiU-eB2lQgiYg-UihhVitabKPLwyAWNtiJGCHG8IgRORBsMeOm35N8o5hgzZQi7dN-mRMs_PSLBYWzWh4PmRiL0096OlLRHf5psjJLu1GqdU8XO2xJXVXrtnnyRyCDicZUNGrQE4HszL67TArGDbUKF2e0_ski3zoSXZaOwZJYkPAlbtgsPbNRjmKXZLvGVD_DoSUELxKOaQmkwnP4y3RREOxtewn9NrCsXXUwa-HEmUT_f_vCTNWrgG3E4RUuELxtBFyarH45OSuRBGu1C6CgINfyMdAN787bASVElaoMMKV1BYN5XhyOJ1KdVmB28guiOnDhYs7otMh2sBFQ3Gvr4F9ySIvxG-Wqear5z1qaHpHO8PQJ5C6QlMSdnU-Rx4JKeYTAMr8iqdmEYYWNGp_B1IWZsIjAwT64DuvUi9wKumyF-CRbTbrFV8cl70vBCWNLgYdV4gIH2yyL09FZcewHGIEaP-k",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"sample\",\n\t\"email\": \"sample@sample.com\",\n\t\"roles\": \"[1]\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"url": "http://localhost:3000/api/v1/users/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"sample\",\n\t\"email\": \"sample@sample.com\",\n\t\"roles\": \"[1]\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"url": "http://localhost:3000/api/v1/users/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Roles",
+			"request": {
+				"url": "http://localhost:3000/api/v1/roles",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Role with RoleId",
+			"request": {
+				"url": "http://localhost:3000/api/v1/roles/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"url": "http://localhost:3000/api/v1/roles",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"user\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Role",
+			"request": {
+				"url": "http://localhost:3000/api/v1/roles/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Role",
+			"request": {
+				"url": "http://localhost:3000/api/v1/roles/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
