@@ -82,7 +82,7 @@ app.put('/api/v1/roles/:id', (req, res) => {
     }
     for (let user of users) {
         const userRoleIndex = user.roles.findIndex(r => r.id === role.id);
-        user.roles[userRoleIndex] = role;
+        if (userRoleIndex !== -1 ) user.roles[userRoleIndex] = role;
     }
     res.status(204).send();
 });
