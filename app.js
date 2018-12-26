@@ -27,9 +27,9 @@ app.post('/api/v1/users', (req, res) => {
     for (const role of JSON.parse(req.body.roles)) {
         userRoles.push(roles.find(r => r.id === role));
     }
-    const user = new User(users.length + 1, req.body.name, req.body.email, userRoles);
+    const user = new User(new Date().getTime(), req.body.name, req.body.email, userRoles);
     users.push(user);
-    res.status(201).send();
+    res.status(201).send(user);
 });
 
 app.put('/api/v1/users/:id', (req, res) => {
@@ -69,9 +69,9 @@ app.get('/api/v1/roles/:id', (req, res) => {
 });
 
 app.post('/api/v1/roles', (req, res) => {
-    const role = new Role(roles.length + 1, req.body.name);
+    const role = new Role(new Date().getTime(), req.body.name);
     roles.push(role);
-    res.status(201).send();
+    res.status(201).send(role);
 });
 
 app.put('/api/v1/roles/:id', (req, res) => {
@@ -94,7 +94,7 @@ app.delete('/api/v1/roles/:id', (req, res) => {
     roles.splice(roleIndex, 1);
     for (let user of users) {
         const userRoleIndex = user.roles.findIndex(r => r.id === role.id);
-        user.roles.splice(userRoleIndex, 1);
+        if (userRoleIndex !== -1 ) user.roles.splice(userRoleIndex, 1);
     }
     res.status(204).send();
 });
